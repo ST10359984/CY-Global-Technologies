@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:padding="16dp">
+
+    <ScrollView
+        android:id="@+id/booking_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNav">
+
+        <LinearLayout
+            android:id="@+id/formLayout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Internet Café Slot"
+                android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                android:textColor="?attr/colorOnSurface"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:paddingBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date (YYYY-MM-DD)"
+                android:inputType="date"
+                android:padding="12dp"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textColorHint="?attr/colorOnSurfaceVariant"
+                android:layout_marginBottom="12dp"
+                android:background="?attr/colorSurfaceVariant"/>
+
+            <EditText
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Time (HH:MM)"
+                android:inputType="time"
+                android:padding="12dp"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textColorHint="?attr/colorOnSurfaceVariant"
+                android:layout_marginBottom="12dp"
+                android:background="?attr/colorSurfaceVariant"/>
+
+            <EditText
+                android:id="@+id/duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Duration (hours)"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textColorHint="?attr/colorOnSurfaceVariant"
+                android:layout_marginBottom="12dp"
+                android:background="?attr/colorSurfaceVariant"/>
+
+            <EditText
+                android:id="@+id/num_users"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Number of Users"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textColorHint="?attr/colorOnSurfaceVariant"
+                android:layout_marginBottom="16dp"
+                android:background="?attr/colorSurfaceVariant"/>
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Book Now"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColor="?attr/colorOnPrimary"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp"/>
+
+            <LinearLayout
+                android:id="@+id/internet_cafe_booking_confirmation"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:gravity="center_horizontal"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Booking confirmed! Your booking details:"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textStyle="bold"
+                    android:paddingBottom="12dp"/>
+
+                <TextView
+                    android:id="@+id/cafe_booking_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceBodyLarge"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:text="Date:"/>
+
+                <TextView
+                    android:id="@+id/cafe_booking_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceBodyLarge"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:text="Time:"/>
+
+                <TextView
+                    android:id="@+id/cafe_booking_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceBodyLarge"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:text="Duration:"/>
+
+                <TextView
+                    android:id="@+id/cafe_booking_users"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceBodyLarge"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:text="Number of Users:"/>
+
+                <Button
+                    android:id="@+id/go_home_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Go to Home"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="?attr/colorSecondaryContainer"
+                    android:textColor="?attr/colorOnSecondaryContainer"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/colorSurface"
+        app:itemIconTint="?attr/colorOnSurface"
+        app:itemTextColor="?attr/colorOnSurface"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</RelativeLayout>

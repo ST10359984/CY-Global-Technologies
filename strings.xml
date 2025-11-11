@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">CY Global Tech</string>
+    <!-- Price Range Options -->
+    <string-array name="price_ranges">
+        <item>All Prices</item>
+        <item>R0 - R1000</item>
+        <item>R1000 - R5000</item>
+        <item>R5000 - R10 000</item>
+        <item>R10 000+</item>
+    </string-array>
+
+    <!-- Sort Options -->
+    <string-array name="sort_options">
+        <item>Relevance</item>
+        <item>Price: Low to High</item>
+        <item>Price: High to Low</item>
+        <item>Newest First</item>
+    </string-array>
+
+    <!-- Brand Options -->
+    <string-array name="brand_options">
+        <item>All Brands</item>
+        <item>Samsung</item>
+        <item>Apple</item>
+        <item>Dell</item>
+        <item>HP</item>
+        <item>Lenovo</item>
+    </string-array>
+
+    <!-- Product Type Options -->
+    <string-array name="product_type_options">
+        <item>All Types</item>
+        <item>Phones</item>
+        <item>Laptops</item>
+        <item>Computers</item>
+        <item>Accessories</item>
+    </string-array>
+
+    <string-array name="all_filters">
+        <item>Price: All Prices</item>
+        <item>Price: R0 - R1000</item>
+        <item>Price: R1000 - R5000</item>
+        <item>Brand: Samsung</item>
+        <item>Brand: Apple</item>
+        <item>Sort: Price Low to High</item>
+        <item>Sort: Newest First</item>
+        <item>Condition: New</item>
+        <item>Condition: Second Hand</item>
+    </string-array>
+
+    <string name="select_filter">Select Filter</string>
+
+</resources>

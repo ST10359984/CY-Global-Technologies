@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="?attr/colorSurface"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/formLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Book Phone Repair"
+            android:textAppearance="?attr/textAppearanceHeadlineSmall"
+            android:textColor="?attr/colorOnSurface"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorSurfaceVariant"
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+            <EditText
+                android:id="@+id/repairNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:background="@android:color/transparent"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textColorHint="?attr/colorOnSurfaceVariant"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorSurfaceVariant"
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+            <EditText
+                android:id="@+id/repairPhoneInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:background="@android:color/transparent"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textColorHint="?attr/colorOnSurfaceVariant"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorSurfaceVariant"
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+            <EditText
+                android:id="@+id/repairEmailInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:background="@android:color/transparent"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textColorHint="?attr/colorOnSurfaceVariant"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorSurfaceVariant"
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+            <EditText
+                android:id="@+id/repairDeviceInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Device"
+                android:inputType="text"
+                android:background="@android:color/transparent"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textColorHint="?attr/colorOnSurfaceVariant"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorSurfaceVariant"
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+            <EditText
+                android:id="@+id/repairProblemInput"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="Problem Description"
+                android:inputType="textMultiLine"
+                android:gravity="top"
+                android:background="@android:color/transparent"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textColorHint="?attr/colorOnSurfaceVariant"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/repairSubmitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Book Repair"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="?attr/colorOnPrimary" />
+
+        <TextView
+            android:id="@+id/repairConfirmationText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="24dp"
+            android:text=""
+            android:textColor="?attr/colorSecondary"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

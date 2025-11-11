@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface">
+
+    <ScrollView
+        android:id="@+id/scrollViewAbout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNav"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/logoImage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/cy_global_tech_logo"
+                    android:contentDescription="CY Global Tech logo"
+                    android:layout_alignParentStart="true" />
+
+                <ImageView
+                    android:id="@+id/cartButton"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_cart"
+                    android:contentDescription="Cart"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="8dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CY Global Technologies CC"
+                android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                android:textColor="?attr/colorOnSurface"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:id="@+id/ourStoryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Our Story"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textColor="?attr/colorOnSurface"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/ourStoryContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CY Global Technologies CC, established in 2007, is an IT company offering a wide range of services. We specialize in sales of new, demo, and refurbished laptops, PC components and equipment, software and hardware support, PC and laptop repairs, technical support (after-sales, remote, and on-site), custom PC builds, network setup, data recovery, and outsourced web development and design. Our focus is on providing exceptional IT support and service at competitive rates, with a commitment to resolving computer problems quickly. We offer nationwide services, including delivery of purchased equipment and courier services for faulty units."
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:id="@+id/contactInfoTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Information"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textColor="?attr/colorOnSurface"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/locationText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location: 30 De Beer Street, Braamfontein, Johannesburg"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/phoneText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone: 011 339 6789"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/emailText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email: info@cyglobaltech.co.za"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:layout_marginBottom="16dp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnViewMap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Location on Map"
+                android:textColor="?attr/colorOnPrimary"
+                app:backgroundTint="?attr/colorPrimary"
+                android:foreground="?attr/selectableItemBackground" />
+
+            <TextView
+                android:id="@+id/footerInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="© 2025 CY Global Technologies | 30 De Beer St, Braamfontein, Johannesburg"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:lineSpacingExtra="2dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/colorSurface"
+        app:itemIconTint="?attr/colorOnSurface"
+        app:itemTextColor="?attr/colorOnSurface"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</RelativeLayout>

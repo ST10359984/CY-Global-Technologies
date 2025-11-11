@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp"
+    android:background="?attr/colorSurface">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Complete Your Payment"
+        android:textAppearance="?attr/textAppearanceHeadlineSmall"
+        android:textColor="?attr/colorOnSurface"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/paymentAmountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total: R0.00"
+        android:textAppearance="?attr/textAppearanceHeadlineMedium"
+        android:textColor="?attr/colorPrimary"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please scan the Capitec Pay Me QR code below and manually enter the total amount."
+        android:textAppearance="?attr/textAppearanceBodyMedium"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <ImageView
+        android:id="@+id/capitecQrImage"
+        android:layout_width="210dp"
+        android:layout_height="250dp"
+        android:src="@drawable/my_qr_code"
+        android:contentDescription="Capitec Pay Me QR Code"
+        android:layout_marginBottom="24dp"
+        android:background="?attr/colorSurfaceVariant"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="After paying, please tap 'Confirm Payment' below."
+        android:textAppearance="?attr/textAppearanceBodyMedium"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/confirmPaymentButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm Payment"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="?attr/colorOnPrimary"
+        android:padding="12dp"/>
+
+</LinearLayout>

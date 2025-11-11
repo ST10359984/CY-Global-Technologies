@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CY Global Technologies CC</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="Images/CY-Global Tech logo.png" alt="CY Global Tech logo" />
+            </a>
+            <h1>CY Global Technologies CC</h1>
+            
+            <a href="cart.html" class="cart-icon-header">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count" class="cart-count-badge">0</span>
+            </a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="about.html">About Us</a>
+                    <a href="profile.html" id="profile-link">Profile</a> 
+                    <a href="login.html" id="login-link">Login</a>      
+                    <a href="register.html" id="register-link">Register</a> 
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="products-page">
+        <aside class="filter-sidebar">
+            <h3>Filter</h3>
+            <div class="filter-group">
+                <label for="price-range">Price Range:</label>
+                <input type="range" name="price-range" id="price-range" min="0" max="1000" value="1000" /> <p>Price: R<span id="price-value">1000</span></p>
+            </div>
+            <div class="sort-controls">
+                <label for="sort-products">Sort By:</label>
+                <select id="sort-products">
+                    <option value="default">Default</option>
+                    <option value="name-asc">Name (A-Z)</option>
+                    <option value="name-desc">Name (Z-A)</option>
+                    <option value="price-asc">Price (Lowest to Highest)</option>
+                    <option value="price-desc">Price (Highest to Lowest)</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="brand">Brand:</label>
+                <select name="brand" id="brand">
+                    <option value="">All Brands</option>
+                    <option value="spectratech">SpectraTech</option>
+                    <option value="zenithinnovations">Zenith Innovations</option>
+                    <option value="quantumsoultions">Quantum Solutions</option>
+                    <option value="brandx">Brand X</option>
+                    <option value="techcorp">TechCorp</option>
+                    <option value="nexgen">NexGen</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="product-type">Product Type:</label>
+                <select name="product-type" id="product-type">
+                    <option value="">All Types</option>
+                    <option value="display">Display</option>
+                    <option value="keyboard">Keyboard</option>
+                    <option value="mouse">Mouse</option>
+                    <option value="headset">Headset</option>
+                    <option value="webcam">Webcam</option>
+                    <option value="printer">Printer</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Condition:</label>
+                <input type="radio" id="all" name="condition" value="all" checked />
+                <label for="all">All</label><br />
+                <input type="radio" id="new" name="condition" value="new" />
+                <label for="new">New</label><br />
+                <input type="radio" id="second-hand" name="condition" value="second-hand" />
+                <label for="second-hand">Second Hand</label>
+            </div>
+        </aside>
+
+        <section class="product-list">
+            <input type="text" id="search-products" placeholder="Search Products" />
+            <div class="product-grid">
+                <div
+                    class="product-card"
+                    data-brand="spectratech"
+                    data-type="display"
+                    data-price="150"
+                    data-name="SpectraTech 24-inch FHD Monitor"
+                >
+                    <img src="https://placehold.co/400x300/e0e0e0/333333?text=Monitor+1" alt="SpectraTech 24-inch FHD Monitor" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e0e0e0/333333?text=Image+Missing';" />
+                    <h4>SpectraTech 24-inch FHD Monitor</h4>
+                    <p class="condition new">New</p>
+                    <p class="product-price">Price: R150</p>
+                    <div class="product-stats">
+                        <p><strong>Size:</strong> 24"</p>
+                        <p><strong>Resolution:</strong> 1920x1080 (FHD)</p>
+                        <p><strong>Refresh Rate:</strong> 75Hz</p>
+                    </div>
+                    <button onclick="addToCart({name:'SpectraTech 24-inch FHD Monitor', price: 150})">Add to Cart</button>
+                </div>
+                <div
+                    class="product-card"
+                    data-brand="zenithinnovations"
+                    data-type="keyboard"
+                    data-price="300"
+                    data-name="Zenith Innovations Mechanical Gaming Keyboard"
+                >
+                    <img src="https://placehold.co/400x300/d0d0d0/222222?text=Keyboard+Gaming" alt="Zenith Innovations Mechanical Gaming Keyboard" onerror="this.onerror=null;this.src='https://placehold.co/400x300/d0d0d0/222222?text=Image+Missing';" />
+                    <h4>Zenith Innovations Mechanical Gaming Keyboard</h4>
+                    <p class="condition second-hand">Second Hand</p>
+                    <p class="product-price">Price: R300</p>
+                    <div class="product-stats">
+                        <p><strong>Type:</strong> Mechanical</p>
+                        <p><strong>Switches:</strong> Brown</p>
+                        <p><strong>Backlight:</strong> RGB</p>
+                    </div>
+                    <button onclick="addToCart({name:'Zenith Innovations Mechanical Gaming Keyboard', price: 300})">Add to Cart</button>
+                </div>
+
+                <div
+                    class="product-card"
+                    data-brand="spectratech"
+                    data-type="mouse"
+                    data-price="80"
+                    data-name="SpectraTech Ergonomic Wireless Mouse"
+                >
+                    <img src="https://placehold.co/400x300/c0c0c0/111111?text=Wireless+Mouse" alt="SpectraTech Ergonomic Wireless Mouse" onerror="this.onerror=null;this.src='https://placehold.co/400x300/c0c0c0/111111?text=Image+Missing';" />
+                    <h4>SpectraTech Ergonomic Wireless Mouse</h4>
+                    <p class="condition new">New</p>
+                    <p class="product-price">Price: R80</p>
+                    <div class="product-stats">
+                        <p><strong>Connectivity:</strong> Wireless</p>
+                        <p><strong>DPI:</strong> 1600</p>
+                        <p><strong>Ergonomics:</strong> Right-Handed</p>
+                    </div>
+                    <button onclick="addToCart({name:'SpectraTech Ergonomic Wireless Mouse', price: 80})">Add to Cart</button>
+                </div>
+                <div
+                    class="product-card"
+                    data-brand="quantumsoultions"
+                    data-type="headset"
+                    data-price="450"
+                    data-name="Quantum Solutions Noise-Cancelling Gaming Headset"
+                >
+                    <img src="https://placehold.co/400x300/b0b0b0/000000?text=Gaming+Headset" alt="Quantum Solutions Noise-Cancelling Gaming Headset" onerror="this.onerror=null;this.src='https://placehold.co/400x300/b0b0b0/000000?text=Image+Missing';" />
+                    <h4>Quantum Solutions Noise-Cancelling Gaming Headset</h4>
+                    <p class="condition new">New</p>
+                    <p class="product-price">Price: R450</p>
+                    <div class="product-stats">
+                        <p><strong>Audio:</strong> 7.1 Surround</p>
+                        <p><strong>Noise Cancellation:</strong> Active</p>
+                        <p><strong>Compatibility:</strong> PC, Console</p>
+                    </div>
+                    <button onclick="addToCart({name:'Quantum Solutions Noise-Cancelling Gaming Headset', price: 450})">Add to Cart</button>
+                </div>
+                <div
+                    class="product-card"
+                    data-brand="brandx"
+                    data-type="display"
+                    data-price="600"
+                    data-name="Brand X 27-inch Curved QHD Monitor"
+                >
+                    <img src="https://placehold.co/400x300/a0a0a0/999999?text=Curved+Monitor" alt="Brand X 27-inch Curved QHD Monitor" onerror="this.onerror=null;this.src='https://placehold.co/400x300/a0a0a0/999999?text=Image+Missing';" />
+                    <h4>Brand X 27-inch Curved QHD Monitor</h4>
+                    <p class="condition second-hand">Second Hand</p>
+                    <p class="product-price">Price: R600</p>
+                    <div class="product-stats">
+                        <p><strong>Curvature:</strong> 1500R</p>
+                        <p><strong>Resolution:</strong> 2560x1440 (QHD)</p>
+                        <p><strong>Panel Type:</strong> VA</p>
+                    </div>
+                    <button onclick="addToCart({name:'Brand X 27-inch Curved QHD Monitor', price: 600})">Add to Cart</button>
+                </div>
+                <div
+                    class="product-card"
+                    data-brand="techcorp"
+                    data-type="webcam"
+                    data-price="220"
+                    data-name="TechCorp Full HD Webcam with Autofocus"
+                >
+                    <img src="https://placehold.co/400x300/909090/888888?text=HD+Webcam" alt="TechCorp Full HD Webcam with Autofocus" onerror="this.onerror=null;this.src='https://placehold.co/400x300/909090/888888?text=Image+Missing';" />
+                    <h4>TechCorp Full HD Webcam with Autofocus</h4>
+                    <p class="condition new">New</p>
+                    <p class="product-price">Price: R220</p>
+                    <div class="product-stats">
+                        <p><strong>Resolution:</strong> 1080p</p>
+                        <p><strong>Features:</strong> Autofocus, Mic</p>
+                        <p><strong>Frame Rate:</strong> 30fps</p>
+                    </div>
+                    <button onclick="addToCart({name:'TechCorp Full HD Webcam with Autofocus', price: 220})">Add to Cart</button>
+                </div>
+                <div
+                    class="product-card"
+                    data-brand="nexgen"
+                    data-type="printer"
+                    data-price="750"
+                    data-name="NexGen All-in-One Inkjet Printer"
+                >
+                    <img src="https://placehold.co/400x300/808080/777777?text=All-in-One+Printer" alt="NexGen All-in-One Inkjet Printer" onerror="this.onerror=null;this.src='https://placehold.co/400x300/808080/777777?text=Image+Missing';" />
+                    <h4>NexGen All-in-One Inkjet Printer</h4>
+                    <p class="condition new">New</p>
+                    <p class="product-price">Price: R750</p>
+                    <div class="product-stats">
+                        <p><strong>Function:</strong> Print, Scan, Copy</p>
+                        <p><strong>Connectivity:</strong> WiFi, USB</p>
+                        <p><strong>Color:</strong> Yes</p>
+                    </div>
+                    <button onclick="addToCart({name:'NexGen All-in-One Inkjet Printer', price: 750})">Add to Cart</button>
+                </div>
+                <div
+                    class="product-card"
+                    data-brand="zenithinnovations"
+                    data-type="mouse"
+                    data-price="120"
+                    data-name="Zenith Innovations High-Precision Gaming Mouse"
+                >
+                    <img src="https://placehold.co/400x300/707070/666666?text=Gaming+Mouse" alt="Zenith Innovations High-Precision Gaming Mouse" onerror="this.onerror=null;this.src='https://placehold.co/400x300/707070/666666?text=Image+Missing';" />
+                    <h4>Zenith Innovations High-Precision Gaming Mouse</h4>
+                    <p class="condition new">New</p>
+                    <p class="product-price">Price: R120</p>
+                    <div class="product-stats">
+                        <p><strong>DPI:</strong> 16000</p>
+                        <p><strong>Buttons:</strong> 7 programmable</p>
+                        <p><strong>Weight:</strong> 90g</p>
+                    </div>
+                    <button onclick="addToCart({name:'Zenith Innovations High-Precision Gaming Mouse', price: 120})">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CY Global Technologies | Location: 30 De Beer St, Braamfontein, Johannesburg, 2001 | Phone: 011 339 6789 | Email: cytech69@gmail.com | Hours: 8:00 - 16:00</p>
+    </footer>
+
+    <div id="message-box-overlay" class="message-box-overlay">
+        <div class="message-box">
+            <h3 id="message-box-title"></h3>
+            <p id="message-box-text"></p>
+            <button id="message-box-ok-button">OK</button>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+    <script src="user-auth.js"></script>
+
+</body>
+</html>

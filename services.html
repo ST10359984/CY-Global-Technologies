@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CY Global Technologies CC</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="Images/CY-Global Tech logo.png" type="images/icon type">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="Images/CY-Global Tech logo.png" alt="CY Global Tech logo" />
+            </a>
+            <h1>CY Global Technologies CC</h1>
+
+            <a href="cart.html" class="cart-icon-header">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count" class="cart-count-badge">0</span>
+            </a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="about.html">About Us</a>
+                    <a href="profile.html" id="profile-link">Profile</a>
+                    <a href="login.html" id="login-link">Login</a>
+                    <a href="register.html" id="register-link">Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="services-page">
+        <section id="internet-cafe">
+            <h2>Internet Café</h2>
+            <p>Book a slot to use our high-speed internet and comfortable workstations.</p>
+            <button onclick="window.location.href='book-internet-cafe.html'">Book a Slot</button>
+        </section>
+
+        <section id="phone-repair">
+            <h2>Phone Repair</h2>
+            <p>Get your phone repaired by our expert technicians. Book a repair and track its progress.</p>
+            <button onclick="window.location.href='book-repair.html'">Book a Repair</button>
+            <div>
+                <h3>Track Repair Progress</h3>
+                <input type="text" id="repair-track-id" placeholder="Enter Repair Reference Number">
+                <button onclick="trackRepair()">Track</button>
+                <div id="repair-status"></div>
+            </div>
+        </section>
+
+        <section id="print-documents">
+            <h2>Print Documents</h2>
+            <p>Send us your documents or pictures for printing.</p>
+            <button id="upload-documents-btn">Upload Documents/Pictures</button> 
+
+            <div id="print-upload-modal" class="modal">
+                <form id="print-upload-form" class="modal-content">
+                    <span id="close-print-modal" class="close-button">&times;</span>
+                    <h3>Upload Files for Printing</h3>
+                    <input type="file" id="print-files-input" multiple>
+                    <button type="submit">Submit for Printing</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CY Global Technologies | Location: 30 De Beer St, Braamfontein, Johannesburg, 2001 | Phone: 011 339 6789 | Email: cytech69@gmail.com | Hours: 8:00 - 16:00</p>
+    </footer>
+
+    <div id="message-box-overlay" class="message-box-overlay">
+        <div class="message-box">
+            <h3 id="message-box-title"></h3>
+            <p id="message-box-text"></p>
+            <button id="message-box-ok-button">OK</button>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+    <script src="user-auth.js"></script>
+
+</body>
+</html>

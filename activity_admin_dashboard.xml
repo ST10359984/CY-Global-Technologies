@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/colorSurface">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin Dashboard"
+        android:textAppearance="?attr/textAppearanceHeadlineSmall"
+        android:textColor="?attr/colorOnSurface"
+        android:textStyle="bold"
+        android:padding="16dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="?attr/colorSurfaceVariant"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add New Product"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/adminProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Product Name"
+                android:layout_marginTop="8dp"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textColorHint="?attr/colorOnSurfaceVariant" />
+
+            <EditText
+                android:id="@+id/adminProductType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Product Type (e.g., Monitor, Mouse)"
+                android:layout_marginTop="8dp"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textColorHint="?attr/colorOnSurfaceVariant" />
+
+            <EditText
+                android:id="@+id/adminProductPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Price (e.g., 150.00)"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="8dp"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textColorHint="?attr/colorOnSurfaceVariant" />
+
+            <ImageView
+                android:id="@+id/adminProductImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerCrop"
+                android:background="?attr/colorSurface"
+                android:contentDescription="Product Image Preview"/>
+
+            <Button
+                android:id="@+id/adminSelectImageButton"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Image"
+                android:layout_marginTop="8dp"
+                android:textColor="?attr/colorOnSurfaceVariant"/>
+
+            <Button
+                android:id="@+id/adminAddProductButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Product"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColor="?attr/colorOnPrimary" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/adminViewAsUserButton"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View App as User"
+        android:layout_margin="16dp"
+        android:textColor="?attr/colorPrimary"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bookings &amp; Orders (Pending)"
+        android:textAppearance="?attr/textAppearanceTitleMedium"
+        android:textColor="?attr/colorOnSurface"
+        android:layout_marginStart="16dp" />
+
+</LinearLayout>
